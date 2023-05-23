@@ -32,6 +32,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/ryanoasis/vim-devicons'
+Plug 'christoomey/vim-tmux-navigator'
 set encoding=UTF-8
 call plug#end()
 
@@ -230,3 +231,8 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+
+" terminal config
+" Define key mapping for split command in horizontal terminal window
+nnoremap <silent> <leader>tt :belowright split term://$SHELL<CR>
+tnoremap <C-e><C-e> <C-\><C-n>
